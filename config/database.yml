@@ -4,6 +4,6 @@ development:
   encoding: unicode
   database: airlines_app_development
   pool: 5
-  username: nickdoherty
   host: localhost
+  username: user
   password:
