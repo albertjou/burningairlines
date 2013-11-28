@@ -1,6 +1,8 @@
 AirlinesApp::Application.routes.draw do
   devise_for :users
 
+  root :to => # We need to specify a home route
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
