@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
-  attr_accessible :title, :first_name, :middle_name, :last_name, :address, :reservation_ids
+  attr_accessible :title, :first_name, :middle_name, :last_name, :address, :reservation_ids, :mobile
 
   has_many :reservations
 end
