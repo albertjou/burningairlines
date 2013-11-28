@@ -5,6 +5,7 @@ class AddFlightsTable < ActiveRecord::Migration
       t.datetime :date_time
       t.string :origin
       t.string :destination
+
       t.timestamps
     end
   end
