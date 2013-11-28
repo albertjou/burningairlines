@@ -1,3 +1,10 @@
+#Clear database
+Plane.destroy_all
+Flight.destroy_all
+User.destroy_all
+Reservation.destroy_all
+
+
 # Planes
 plane1 = Plane.create(:model_number => "Boeing 787", :status => "operational", :seats => 250)
 plane2 = Plane.create(:model_number => "Airbus 380", :status => "operational", :seats => 525)
@@ -47,6 +54,14 @@ flight6.plane_id = plane2.id
 flight7.plane_id = plane3.id
 flight8.plane_id = plane4.id
 
+plane1.flights << flight1
+plane2.flights << flight2
+plane2.flights << flight6
+plane3.flights << flight3
+plane3.flights << flight7
+plane4.flights << flight4
+plane4.flights << flight8
+plane5.flights << flight5
 
 reservation1.user_id = user1.id
 reservation1.flight_id = flight1.id
@@ -73,8 +88,31 @@ reservation11.flight_id = flight5.id
 reservation12.user_id = user4.id
 reservation12.flight_id = flight4.id
 
+user1.reservations << reservation1
+user1.reservations << reservation2
+user1.reservations << reservation3
+user1.reservations << reservation4
+user2.reservations << reservation5
+user2.reservations << reservation6
+user2.reservations << reservation7
+user2.reservations << reservation8
+user3.reservations << reservation9
+user3.reservations << reservation10
+user3.reservations << reservation11
+user4.reservations << reservation12
 
-
+flight1.reservations << reservation1
+flight1.reservations << reservation5
+flight1.reservations << reservation9
+flight2.reservations << reservation2
+flight3.reservations << reservation3
+flight4.reservations << reservation4
+flight4.reservations << reservation12
+flight5.reservations << reservation6
+flight5.reservations << reservation11
+flight6.reservations << reservation7
+flight7.reservations << reservation8
+flight8.reservations << reservation10
 
 
 
