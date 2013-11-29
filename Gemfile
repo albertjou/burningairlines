@@ -10,7 +10,6 @@ gem 'haml'
 gem 'devise'
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
-gem "jquery-ui-rails"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -39,4 +38,4 @@ group :development, :test do
   # Add RailsPanel extension in the Chrome Web Store
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.3.0'
