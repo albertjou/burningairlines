@@ -1,11 +1,4 @@
 ActiveAdmin.setup do |config|
-
-  config.allow_comments = false
-
-  config.site_title = "Airlines App"
-
-end
-
   # == Site Title
   #
   # Set the title that is displayed on the main layout
@@ -210,3 +203,4 @@ end
   # You can enable or disable them for all resources here.
   #
   # config.filters = true
+end
