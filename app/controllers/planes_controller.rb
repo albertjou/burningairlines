@@ -1,3 +1,3 @@
-class PlanesController < ActionController::Base
+class PlanesController < ApplicationController
   protect_from_forgery
 end

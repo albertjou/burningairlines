@@ -12,3 +12,8 @@ flightApp.Reservation = Backbone.Model.extend({
   }
 
 });
+
+flightApp.Reservations = Backbone.Collection.extend({
+  model: flightApp.Reservation,
+  url: '/reservations'
+})
