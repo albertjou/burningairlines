@@ -77,27 +77,27 @@
 @-webkit-keyframes plane-fly {0% {left: -10%; -webkit-transform: scale(.4);} 50% {left: 110%; -webkit-transform: scale(1);} 51%{-webkit-transform: rotateY(180deg);} 100% {left: -10%; -webkit-transform: scale(1.4) rotateY(180deg); }}
 
 /*===================================*/
-
+/*
 div.input-group .form-control {
   width: 400px
 }
 div.input-group-lg .form-control {
   width: 300px;
   margin-right: none;
-}
+}*/
 
 div .input-group-addon {
-  width: 150px;
+  min-width: 100px;
 }
 
 .to-from {
   margin-bottom: 30px;
 }
 
-.btn-lg {
+/*.btn-lg {
   width: 175px;
   margin: 20% 50%;
-}
+}*/
 
 body {
   background-color: #4491C4;
@@ -124,7 +124,7 @@ h1 {
   color: #E25822;
   text-align: center;
   padding-bottom: 10px;
-  background-color: rgba(256,256,256,.03);
+  background-color: rgb(256,256,256,.03);
   font-size: 80px;
   text-align: center;
 
