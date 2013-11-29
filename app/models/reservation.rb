@@ -12,7 +12,7 @@
 #
 
 class Reservation < ActiveRecord::Base
-  attr_accessible :flight_id, :meal, :notes, :user_id
+  attr_accessible :flight_id, :meal, :notes, :user_id, :seat_number
   belongs_to :flight
   belongs_to :user
 end
