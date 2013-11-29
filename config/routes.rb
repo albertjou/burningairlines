@@ -1,7 +1,12 @@
 AirlinesApp::Application.routes.draw do
-  devise_for :users
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
-  root :to => # We need to specify a home route
+  devise_for :users
+  ActiveAdmin.routes(self)
+
+  # We need to specify a home route
+  root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -5,5 +5,5 @@ development:
   database: airlines_app_development
   pool: 5
   host: localhost
-  username: user
+  username: nickdoherty
   password:
