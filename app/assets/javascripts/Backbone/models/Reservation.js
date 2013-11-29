@@ -8,6 +8,7 @@ flightApp.Reservation = Backbone.Model.extend({
     flight_id: "",
     user_id: "",
     meal: "",
+    seat_number: "",
     notes: ""
   }
 
