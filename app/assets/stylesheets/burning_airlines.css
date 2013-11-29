@@ -1,0 +1,15 @@
+div.input-group .form-control {
+  width: 400px
+}
+div.input-group-lg .form-control {
+  width: 300px;
+  margin-right: none;
+}
+
+div .input-group-addon {
+  width: 150px;
+}
+
+.to-from {
+
+}
