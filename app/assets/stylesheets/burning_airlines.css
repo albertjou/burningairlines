@@ -94,17 +94,19 @@ div .input-group-addon {
   margin-bottom: 30px;
 }
 
-/*.btn-lg {
-  width: 175px;
-  margin: 20% 50%;
-}*/
+
+.btn-lg {
+  width: 100%;
+}
 
 body {
   background-color: #4491C4;
 }
 
 .homepage-content {
-  margin-top: -150px;
+  margin-top: -130px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .home-input {
@@ -221,7 +223,7 @@ span {
   10px -90px 80px  #973716;}
 }
 
-#footer {
-  background: #CE7E3E;
-  position: relative;
+.footer {
+  margin-top: 50px;
+  text-align: center;
 }
