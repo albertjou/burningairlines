@@ -9,7 +9,9 @@
     </tr>
   </thead>
   <tbody>
-    <% User.order(:title).each do |user| %>
+    <% @flight = Flight.find params[:id] %>
+    <% User.order(:last_name).each do |user| %>
+      <% next unless @flight.id.in?(user.flight_ids) %>
       <tr>
         <td><%= user.title %></td>
         <td><%= user.first_name %></td>

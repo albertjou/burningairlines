@@ -35,5 +35,5 @@ class User < ActiveRecord::Base
   attr_accessible :title, :first_name, :middle_name, :last_name, :address, :reservation_ids, :mobile
 
   has_many :reservations
-  has_and_belongs_to_many :flights
+  has_many :flights, :through => :reservations
 end
