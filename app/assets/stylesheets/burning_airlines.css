@@ -223,7 +223,7 @@ span {
   10px -90px 80px  #973716;}
 }
 
-#footer {
-  background: #CE7E3E;
-  position: relative;
+.footer {
+  margin-top: 50px;
+  text-align: center;
 }
