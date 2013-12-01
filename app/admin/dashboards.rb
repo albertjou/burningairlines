@@ -11,16 +11,3 @@ ActiveAdmin.register_page "Dashboard" do
     end
   end
 end
-
-# ActiveAdmin::Dashboard.build do
-
-#     section "Upcoming Flights" do
-#         table_for Flight.order("date_time desc").limit(5) do
-#             column :plane_id
-#             column "Leaving at", :date_time
-#             column :origin
-#             column :destination
-#         end
-#         strong { link_to "See all flights", admin_flights_path }
-#     end
-# end

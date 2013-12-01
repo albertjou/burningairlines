@@ -20,6 +20,11 @@ ActiveAdmin.setup do |config|
 
   # == Default Namespace
   #
+  ActiveAdmin.setup do |config|
+    config.namespace :admin do |admin|
+      admin.allow_comments = false
+    end
+  end
   # Set the default namespace each administration resource
   # will be added to.
   #
@@ -99,6 +104,7 @@ ActiveAdmin.setup do |config|
   # Admin comments are enabled by default.
   #
   # Default:
+
   # config.allow_comments = true
   #
   # You can turn them on and off for any given namespace by using a
@@ -109,13 +115,11 @@ ActiveAdmin.setup do |config|
   #     without_comments.allow_comments = false
   #   end
 
-
   # == Batch Actions
   #
   # Enable and disable Batch Actions
   #
   config.batch_actions = true
-
 
   # == Controller Filters
   #

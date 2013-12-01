@@ -6,7 +6,9 @@ var flightApp = flightApp || {
 
 flightApp.flightSelectionView = Backbone.View.extend({
   el: '#flight-selection',
-  events: {},
+  events: {
+
+  },
   initialize: function () {
 
   },

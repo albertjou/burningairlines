@@ -2,8 +2,8 @@ var flightApp = flightApp || {
 
 };
 
-flightApp.Reservation = Backbone.Model.extend({
-  urlRoot: '/reservations',
+flightApp.Flights = Backbone.Model.extend({
+  urlRoot: '/flights',
   defaults: {
     flight_id: "",
     user_id: "",
@@ -14,7 +14,7 @@ flightApp.Reservation = Backbone.Model.extend({
 
 });
 
-flightApp.Reservations = Backbone.Collection.extend({
+flightApp.Flights = Backbone.Collection.extend({
   model: flightApp.Reservation,
-  url: '/reservations'
+  url: '/flight'
 })
