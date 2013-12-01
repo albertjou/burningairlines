@@ -1,19 +1,19 @@
-var flightApp = flightApp || {
+// var flightApp = flightApp || {
 
-};
+// };
 
-// This is the view that will generate the seats
+// // This is the view that will generate the seats
 
-flightApp.flightSelectionView = Backbone.View.extend({
-  el: '#flight-selection',
-  events: {
+// flightApp.flightSelectionView = Backbone.View.extend({
+//   el: '#flight-selection',
+//   events: {
 
-  },
-  initialize: function () {
+//   },
+//   initialize: function () {
 
-  },
-  render: function () {
+//   },
+//   render: function () {
 
-  }
-});
+//   }
+// });
 

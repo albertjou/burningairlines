@@ -3,7 +3,6 @@
 <head>
   <title>AirlinesApp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
 </head>
@@ -33,9 +32,10 @@
 
    <%= yield %>
 
-
+  <div class="page"></div>
 
    <!-- templates -->
+
    <script type="text/x-handlebars-template" id="flight-template">
    <div class="table-responsive">
    <table class="table table-hover" id="flight-selection">
@@ -53,12 +53,22 @@
    </script>
 
   <script type="text/x-handlebars-template" id="flight-single-template">
-
+   <tbody>
+   <tr>
+   <td>{{ origin }}</td>
+   <td>{{ destination}}</td>
+   <td>{{ date_time }}</td>
+   <td>{{ date_time }}</td>
+   <td>Book</td>
+   </tr>
+   </tbody>
   </script>
 
   <script type="text/x-handlebars-template" id="seat-template">
   </script>
+
  </div><!-- wrap -->
+<!--
  <div id="footer">
   <div class="container">
     <ground class="ground">
@@ -90,5 +100,8 @@
     <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
   </div><!-- container -->
 </div><!-- footer -->
+ -->
+  <%= javascript_include_tag "application" %>
+
 </body>
 </html>
