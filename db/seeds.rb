@@ -6,11 +6,11 @@ Reservation.destroy_all
 
 
 # Planes
-plane1 = Plane.create(:model_number => "Boeing 787", :status => "operational", :seats => 250)
-plane2 = Plane.create(:model_number => "Airbus 380", :status => "operational", :seats => 525)
-plane3 = Plane.create(:model_number => "Boeing 777", :status => "operational", :seats => 400)
-plane4 = Plane.create(:model_number => "Boeing 747", :status => "operational", :seats => 450)
-plane5 = Plane.create(:model_number => "Airbus 320", :status => "operational", :seats => 150)
+plane1 = Plane.create(:model_number => "Boeing 787", :status => "operational", :seats => 25)
+plane2 = Plane.create(:model_number => "Airbus 380", :status => "operational", :seats => 52)
+plane3 = Plane.create(:model_number => "Boeing 777", :status => "operational", :seats => 40)
+plane4 = Plane.create(:model_number => "Boeing 747", :status => "operational", :seats => 45)
+plane5 = Plane.create(:model_number => "Airbus 320", :status => "operational", :seats => 15)
 
 # Flights
 flight1 = Flight.create(:date_time => "2013-12-01 17:44:11 +1100", :origin => "SYD", :destination => "LAX")
