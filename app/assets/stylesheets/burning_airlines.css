@@ -282,6 +282,12 @@ form hr {
   text-decoration: none;
 }
 
+.table.table-hover thead {
+  background-color: rgba(255, 255, 255, 0.4);
+}
 
 
+.tall {
+  font-size: 30px;
+}
 
