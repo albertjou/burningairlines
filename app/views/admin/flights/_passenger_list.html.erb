@@ -1,5 +1,29 @@
-<h1>Passengers</h1>
-<table class="table table-striped">
+<div class="bs">
+ <h4>Plane Details</h4>
+  <table class="table ">
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th>Total Seats</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @flight = Flight.find params[:id] %>
+      <% Plane.order(:model_number).each do |plane| %>
+        <% next unless @flight.id.in?(plane.flight_ids) %>
+        <tr>
+          <td><%= plane.model_number %></td>
+          <td><%= plane.seats %></td>
+          <td><%= plane.status %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<h4>Passengers</h4>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
