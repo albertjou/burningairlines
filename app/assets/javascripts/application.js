@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore-min
+
 //= require handlebars-v1.1.2
 //= require backbone-min
 //= require backbone-forms.min

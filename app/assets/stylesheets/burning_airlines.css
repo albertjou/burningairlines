@@ -227,3 +227,61 @@ span {
   margin-top: 50px;
   text-align: center;
 }
+
+
+#flight-selection {
+  background-color: #E25822;
+  font-size: 20px
+}
+
+#flight-selection tbody:hover {
+  background-color: grey;
+}
+
+form hr {
+  width: 200px;
+}
+.sign-up {
+  background-color: rgba(67, 67, 67, 0.5);
+  max-width: 500px;
+  margin-top: 100px;
+  border-radius: 20px;
+  padding-left: 60px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  margin: auto;
+}
+.sign-up h2 {
+  color: white;
+}
+.sign-up label {
+  color: white;
+  font-size: 14px;
+  padding-top: 8px;
+}
+.sign-up div {
+  max-width: 500px;
+  margin-right: 0px;
+}
+.sign-up-button {
+  margin-top: 20px
+}
+.sign-up a {
+  color: white;
+  padding-left: 10px;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+}
+
+.navbar.navbar-default a,
+.navbar-default .navbar-nav > li > a {
+  color: #E56B2F;
+  text-decoration: none;
+}
+
+
+
+
