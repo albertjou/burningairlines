@@ -227,3 +227,19 @@ span {
   margin-top: 50px;
   text-align: center;
 }
+
+
+#flight-selection {
+  background-color: #E25822;
+  font-size: 20px
+}
+
+#flight-selection tbody:hover {
+  background-color: grey;
+}
+
+
+
+
+
+

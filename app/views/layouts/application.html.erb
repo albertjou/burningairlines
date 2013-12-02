@@ -32,7 +32,7 @@
 
    <%= yield %>
 
-  <div class="page"></div>
+  <div class="page container"></div>
 
    <!-- templates -->
 
@@ -45,7 +45,6 @@
    <th>Destination</th>
    <th>Date</th>
    <th>Time</th>
-   <th>Book</th>
    </tr>
    </thead>
    </table>
@@ -57,9 +56,8 @@
    <tr>
    <td>{{ origin }}</td>
    <td>{{ destination}}</td>
-   <td>{{ date_time }}</td>
-   <td>{{ date_time }}</td>
-   <td>Book</td>
+   <td>{{ dateFormat date_time }}</td>
+   <td>{{ dateFormat date_time format="h:mm a" }}</td>
    </tr>
    </tbody>
   </script>
@@ -69,6 +67,7 @@
 
  </div><!-- wrap -->
   <%= javascript_include_tag "application" %>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js"></script>
 
   <div class="footer container">
     <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
