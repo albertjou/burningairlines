@@ -63,6 +63,12 @@
   </script>
 
   <script type="text/x-handlebars-template" id="seat-template">
+    {{#if num}}
+      <div class="seat taken"></div>
+    {{else}}
+      <div class="seat available"></div>
+    {{/if}}
+
   </script>
 
  </div><!-- wrap -->

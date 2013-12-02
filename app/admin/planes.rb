@@ -5,4 +5,6 @@ ActiveAdmin.register Plane do
     column :seats
     default_actions
   end
+
+  config.filters = false
 end

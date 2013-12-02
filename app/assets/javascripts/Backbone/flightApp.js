@@ -48,7 +48,8 @@ $(document).ready(function() {
 
 var templates = {
   flightView: $('#flight-template').html(),
-  flightListView: $('#flight-single-template').html()
+  flightListView: $('#flight-single-template').html(),
+  flightSeatView: $('#seat-template').html()
 };
 
 var FlightView = Backbone.View.extend({
@@ -57,13 +58,10 @@ var FlightView = Backbone.View.extend({
     'submit .search-form' : "load"
   },
   render: function () {
-    this.$el.find('.page').html('something should show here');
   },
   load: function () {
-    alert("need to compile template");
     var origin = this.$('#origin').val();
     var destination = this.$('#destination').val();
-    this.$el.find('.page').html(origin + " " + destination);
     var url = [
         '/flights',
         encodeURIComponent(origin),
@@ -75,11 +73,10 @@ var FlightView = Backbone.View.extend({
           url: url,
           method: 'get'
       }).done(function (results) {
-          alert("Result returned");
-          var resultTemplate = Handlebars.compile( templates.flightListView );
+          $('.search-form')[0].reset();
           _.each(results, function(result){
-            $('#flight-selection').append(resultTemplate( result ));
-            $('#flight-selection').reset()
+            var flightListView = new FlightListView({model: result});
+            flightListView.render();
           });
       }).error(function () {
           alert('this is error');
@@ -88,20 +85,58 @@ var FlightView = Backbone.View.extend({
   }
 });
 
+var FlightListView = Backbone.View.extend({
+  el: '#flight-selection',
+  events: {
+    'click tbody' : 'seatSelection'
+  },
+  render: function () {
+    var resultTemplate = Handlebars.compile( templates.flightListView );
+    this.$el.append(resultTemplate( this.model ));
+  },
+  seatSelection: function () {
+    // Need to first pass the selected into the router
+    console.log("seatSelection clicked")
+    router.navigate('flights/' + this.model.id, true);
+  }
 
+});
 
+var SeatListView = Backbone.View.extend({
+  el: '.page',
+  render: function () {
 
+  }
+});
 
+// Model
+ var Flight = Backbone.Model.extend({
+  urlRoot: '/flights'
+});
 
   var Router = Backbone.Router.extend({
     routes: {
-      'temp' : 'tempMethod'
+      'temp' : 'tempMethod',
+      'flights/:id' : 'fullFlightView'
     }
   });
   var flightView = new FlightView();
   var router = new Router();
   router.on('route:tempMethod', function(){
     flightView.render();
+  });
+  router.on('route:fullFlightView', function (id) {
+    var flight = new Flight({id: id});
+    var template = Handlebars.compile( templates.flightSeatView );
+    flight.fetch({
+      success: function (data){
+        seatArray = data.attributes.seats;
+        // Need to find some way to remove the first value
+        _.each(seatArray, function(num){
+          $('.page').append(template({num: num}));
+        });
+      }
+    });
   });
   Backbone.history.start();
 
