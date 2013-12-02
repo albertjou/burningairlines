@@ -16,4 +16,15 @@ class Flight < ActiveRecord::Base
   belongs_to :plane
   has_many :reservations
   has_and_belongs_to_many :users
+
+
+  def seats
+    seats = []
+    taken_seats = self.reservations.map { |r| r.seat_number.to_i }
+    (1..self.plane.seats).to_a.each do |x|
+      seats[x] = x.in?(taken_seats)
+    end
+    return seats
+  end
+
 end
