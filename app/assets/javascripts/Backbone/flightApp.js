@@ -131,9 +131,9 @@ var SeatListView = Backbone.View.extend({
     flight.fetch({
       success: function (data){
         seatArray = data.attributes.seats;
-        _.each(seatArray, i, function(){
-          console.log(seatArray[i]);
-          $('.page').append(template(seatArray));
+        // Need to find some way to remove the first value
+        _.each(seatArray, function(num){
+          $('.page').append(template({num: num}));
         });
       }
     });
