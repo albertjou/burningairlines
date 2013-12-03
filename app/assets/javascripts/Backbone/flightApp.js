@@ -140,4 +140,8 @@ var SeatListView = Backbone.View.extend({
   });
   Backbone.history.start();
 
+  $(document).on('click', '.available', function () {
+    $(this).toggleClass('taken')
+  });
+
 });

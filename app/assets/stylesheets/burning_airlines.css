@@ -286,18 +286,30 @@ form hr {
   background-color: rgba(255, 255, 255, 0.4);
 }
 .available {
-  height: 50px;
-  width: 50px;
-  border: 3px solid green;
+  color: green;
 }
 
 .taken {
-  height: 50px;
-  width: 50px;
-  border: 3px solid red;
+  color: red;
 }
 
 .tall {
   font-size: 30px;
+}
+
+.seat {
+  display: inline-block;
+}
+
+.page.container {
+  width: 750px;
+  margin-top: 50px;
+  padding-left: 10px;
+}
+
+i {
+  font-size: 40px;
+  padding-left: 6px;
+  padding-top: 4px;
 }
 
